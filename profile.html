@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Profile | Education at Glance
+    </title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+    <a
+        class="brand"
+        href="dashboard.html">
+
+        <img
+            src="assets/logo.png"
+            alt="Education at Glance">
+
+    </a>
+
+
+    <nav>
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="courses.html">
+            Courses
+        </a>
+
+        <button
+            class="nav-btn"
+            id="logoutBtn">
+
+            Logout
+
+        </button>
+
+    </nav>
+
+</header>
+
+
+<main class="page narrow">
+
+
+<div class="page-heading">
+
+    <span class="eyebrow">
+        ACCOUNT
+    </span>
+
+    <h1>
+        My Profile
+    </h1>
+
+</div>
+
+
+<div class="profile-card">
+
+    <div
+        class="avatar"
+        id="avatar">
+
+        E
+
+    </div>
+
+
+    <div>
+
+        <h2 id="profileName">
+            Loading...
+        </h2>
+
+        <p
+            id="profileEmail"
+            class="muted">
+        </p>
+
+        <p
+            id="profileRole"
+            class="tag">
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="profile-actions">
+
+    <a
+        id="adminLink"
+        class="btn primary hidden"
+        href="admin.html">
+
+        Admin panel
+
+    </a>
+
+
+    <button
+        class="btn ghost"
+        id="logout2">
+
+        Logout
+
+    </button>
+
+</div>
+
+
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="config.js"></script>
+
+<script src="auth.js"></script>
+
+<script src="profile.js"></script>
+
+
+</body>
+</html>
