@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Register | Education at Glance
+    </title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body class="center-page">
+
+
+<div class="auth-card">
+
+    <a href="index.html">
+
+        <img
+            class="auth-logo"
+            src="assets/logo.png"
+            alt="Education at Glance">
+
+    </a>
+
+
+    <h1>
+        Create your account
+    </h1>
+
+
+    <p class="muted">
+        Start your learning journey.
+    </p>
+
+
+    <form id="registerForm">
+
+        <label>
+            Full name
+        </label>
+
+        <input
+            id="name"
+            type="text"
+            required
+            placeholder="Your name">
+
+
+        <label>
+            Email
+        </label>
+
+        <input
+            id="email"
+            type="email"
+            required
+            placeholder="you@example.com">
+
+
+        <label>
+            Password
+        </label>
+
+        <input
+            id="password"
+            type="password"
+            minlength="6"
+            required
+            placeholder="At least 6 characters">
+
+
+        <button
+            class="btn primary full"
+            type="submit">
+
+            Register
+
+        </button>
+
+
+        <p
+            id="msg"
+            class="form-msg">
+        </p>
+
+    </form>
+
+
+    <p class="switch">
+
+        Already registered?
+
+        <a href="login.html">
+            Login
+        </a>
+
+    </p>
+
+
+    <a class="back"
+       href="index.html">
+
+        ← Home
+
+    </a>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="config.js"></script>
+
+<script src="auth.js"></script>
+
+
+<script>
+
+document
+    .getElementById("registerForm")
+    .addEventListener(
+        "submit",
+        registerUser
+    );
+
+</script>
+
+</body>
+</html>
