@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Login | Education at Glance
+    </title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body class="center-page">
+
+
+<div class="auth-card">
+
+    <a href="index.html">
+
+        <img
+            class="auth-logo"
+            src="assets/logo.png"
+            alt="Education at Glance">
+
+    </a>
+
+
+    <h1>
+        Welcome back
+    </h1>
+
+
+    <p class="muted">
+        Sign in to continue learning.
+    </p>
+
+
+    <form id="loginForm">
+
+        <label>
+            Email
+        </label>
+
+        <input
+            id="email"
+            type="email"
+            required
+            placeholder="you@example.com">
+
+
+        <label>
+            Password
+        </label>
+
+        <input
+            id="password"
+            type="password"
+            required
+            placeholder="Enter your password">
+
+
+        <button
+            class="btn primary full"
+            type="submit">
+
+            Login
+
+        </button>
+
+
+        <p
+            id="msg"
+            class="form-msg">
+        </p>
+
+    </form>
+
+
+    <p class="switch">
+
+        New here?
+
+        <a href="register.html">
+            Create an account
+        </a>
+
+    </p>
+
+
+    <a class="back"
+       href="index.html">
+
+        ← Home
+
+    </a>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="config.js"></script>
+
+<script src="auth.js"></script>
+
+
+<script>
+
+document
+    .getElementById("loginForm")
+    .addEventListener(
+        "submit",
+        loginUser
+    );
+
+</script>
+
+</body>
+</html>
