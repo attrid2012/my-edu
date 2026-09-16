@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Admin | Education at Glance
+    </title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+    <a
+        class="brand"
+        href="dashboard.html">
+
+        <img
+            src="assets/logo.png"
+            alt="Education at Glance">
+
+    </a>
+
+
+    <nav>
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="courses.html">
+            Courses
+        </a>
+
+        <a href="profile.html">
+            Profile
+        </a>
+
+        <button
+            class="nav-btn"
+            id="logoutBtn">
+
+            Logout
+
+        </button>
+
+    </nav>
+
+</header>
+
+
+<main class="page">
+
+
+<div class="page-heading">
+
+    <span class="eyebrow">
+        ADMIN
+    </span>
+
+    <h1>
+        Admin panel
+    </h1>
+
+    <p>
+        Manage lessons and manually grant access
+        until Razorpay is added.
+    </p>
+
+</div>
+
+
+<div class="admin-grid">
+
+
+<section class="panel">
+
+    <h2>
+        Add lesson
+    </h2>
+
+
+    <form id="lessonForm">
+
+
+        <label>
+            Course
+        </label>
+
+        <select
+            id="courseId"
+            required>
+        </select>
+
+
+        <label>
+            Subject
+        </label>
+
+        <select
+            id="subjectId"
+            required>
+        </select>
+
+
+        <label>
+            Lesson title
+        </label>
+
+        <input
+            id="lessonTitle"
+            required
+            placeholder="e.g. Introduction to Algebra">
+
+
+        <label>
+            Video URL
+        </label>
+
+        <input
+            id="videoUrl"
+            type="url"
+            placeholder="YouTube or video URL">
+
+
+        <label>
+            Notes URL
+        </label>
+
+        <input
+            id="notesUrl"
+            type="url"
+            placeholder="PDF/notes URL">
+
+
+        <button
+            class="btn primary full"
+            type="submit">
+
+            Add lesson
+
+        </button>
+
+
+        <p
+            id="adminMsg"
+            class="form-msg">
+        </p>
+
+
+    </form>
+
+</section>
+
+
+
+<section class="panel">
+
+    <h2>
+        Grant course access
+    </h2>
+
+
+    <form id="purchaseForm">
+
+
+        <label>
+            User ID
+        </label>
+
+        <input
+            id="userId"
+            required
+            placeholder="Supabase user UUID">
+
+
+        <label>
+            Course
+        </label>
+
+        <select
+            id="purchaseCourseId"
+            required>
+        </select>
+
+
+        <button
+            class="btn primary full"
+            type="submit">
+
+            Grant access
+
+        </button>
+
+
+        <p class="muted small">
+
+            Use this only for testing/manual
+            enrolment. Razorpay can replace
+            this later.
+
+        </p>
+
+
+    </form>
+
+</section>
+
+
+</div>
+
+
+<section class="panel">
+
+    <h2>
+        Recent users
+    </h2>
+
+    <div id="users">
+    </div>
+
+</section>
+
+
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="config.js"></script>
+
+<script src="auth.js"></script>
+
+<script src="admin.js"></script>
+
+
+</body>
+</html>
